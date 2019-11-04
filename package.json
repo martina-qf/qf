@@ -1,0 +1,22 @@
+{
+  "name": "qf",
+  "version": "1.0.0",
+  "description": "qf web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test/test-server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "martin atkinson",
+  "license": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "request": "^2.88.0"
+  }
+}
