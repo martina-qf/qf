@@ -57,9 +57,11 @@ describe('Flights bad JSON', function() {
 var test1_JSON = fs.readFileSync(__dirname + '\\test1.JSON', 'utf8');
 var test2_JSON = fs.readFileSync(__dirname + '\\test2.JSON', 'utf8');
 var test3_JSON = fs.readFileSync(__dirname + '\\test3.JSON', 'utf8');
+var test4_JSON = fs.readFileSync(__dirname + '\\test4.JSON', 'utf8');
+var test5_JSON = fs.readFileSync(__dirname + '\\test5.JSON', 'utf8');
 
 
-describe('SYD QF flights', function() {
+describe('Qualifying flights', function() {
     it('SYD QF arrival', function(done) {
 		request.post({
 			headers: {'content-type' : 'application/json'},
@@ -95,5 +97,31 @@ describe('SYD QF flights', function() {
         });
     });	
 });
+
+describe('Non-qualifying flights', function() {
+    it('SYD non-QF', function(done) {
+		request.post({
+			headers: {'content-type' : 'application/json'},
+			url:     api_url,
+			body:    test4_JSON
+		}, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+			expect(body).to.equal('{"flights":[]}');
+            done();
+        });
+    });
+    it('QF non-SYD', function(done) {
+		request.post({
+			headers: {'content-type' : 'application/json'},
+			url:     api_url,
+			body:    test5_JSON
+		}, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+			expect(body).to.equal('{"flights":[]}');
+            done();
+        });
+    });
+});
+
 
 

@@ -1,0 +1,30 @@
+{
+"flights":[{
+	"departure": {
+		"airport":
+			{"iata": "DXB",
+			 "airline": "EK", 
+			 "flightNumber": "416"},
+		"scheduled":
+			{"datetime": "06/11/2019 09:00"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "SYD"}
+	}
+},
+{
+	"departure": {
+		"airport":
+			{"iata": "SYD",
+			 "airline": "EK", 
+			 "flightNumber": "417"},
+		"scheduled":
+			{"datetime": "06/11/2019 12:50"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "DXB"}
+	}
+}]
+}

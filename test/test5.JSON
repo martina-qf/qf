@@ -1,0 +1,16 @@
+{
+"flights":[{
+	"departure": {
+		"airport":
+			{"iata": "CNS",
+			 "airline": "QF", 
+			 "flightNumber": "003"},
+		"scheduled":
+			{"datetime": "11/11/2019 12:30"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "PER"}
+	}
+}]
+}

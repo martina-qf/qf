@@ -62,6 +62,7 @@ function doFlights(req, res, next) {
 				destination: flight.arrival.airport.iata,
 				departureTime: flight.departure.scheduled.datetime
 			};
+			// add the new object to the response array
 			response[key].push(data);
 		}
 	}
