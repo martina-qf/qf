@@ -52,3 +52,48 @@ describe('Flights bad JSON', function() {
         });
     });	
 });
+
+// read the JSON test data from the file system
+var test1_JSON = fs.readFileSync(__dirname + '\\test1.JSON', 'utf8');
+var test2_JSON = fs.readFileSync(__dirname + '\\test2.JSON', 'utf8');
+var test3_JSON = fs.readFileSync(__dirname + '\\test3.JSON', 'utf8');
+
+
+describe('SYD QF flights', function() {
+    it('SYD QF arrival', function(done) {
+		request.post({
+			headers: {'content-type' : 'application/json'},
+			url:     api_url,
+			body:    test1_JSON
+		}, function(error, response, body) {
+			//console.log(body);
+            expect(response.statusCode).to.equal(200);
+			expect(body).to.equal('{"flights":[{"flight":"QF001 BNE","destination":"SYD","departureTime":"05/11/2019 22:00"}]}');
+            done();
+        });
+    });
+    it('SYD QF departure', function(done) {
+		request.post({
+			headers: {'content-type' : 'application/json'},
+			url:     api_url,
+			body:    test2_JSON
+		}, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            expect(body).to.equal('{"flights":[{"flight":"QF002 SYD","destination":"PER","departureTime":"06/11/2019 14:00"}]}');
+            done();
+        });
+    });
+    it('SYD QF combined', function(done) {
+		request.post({
+			headers: {'content-type' : 'application/json'},
+			url:     api_url,
+			body:    test3_JSON
+		}, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            expect(body).to.equal('{"flights":[{"flight":"QF001 BNE","destination":"SYD","departureTime":"05/11/2019 22:00"},{"flight":"QF002 SYD","destination":"PER","departureTime":"06/11/2019 14:00"}]}');
+            done();
+        });
+    });	
+});
+
+

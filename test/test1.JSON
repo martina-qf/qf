@@ -1,0 +1,16 @@
+{
+"flights":[{
+	"departure": {
+		"airport":
+			{"iata": "BNE",
+			 "airline": "QF", 
+			 "flightNumber": "001"},
+		"scheduled":
+			{"datetime": "05/11/2019 22:00"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "SYD"}
+	}
+}]
+}

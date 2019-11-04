@@ -1,0 +1,16 @@
+{
+"flights":[{
+	"departure": {
+		"airport":
+			{"iata": "SYD",
+			 "airline": "QF", 
+			 "flightNumber": "002"},
+		"scheduled":
+			{"datetime": "06/11/2019 14:00"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "PER"}
+	}
+}]
+}
