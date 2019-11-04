@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e0066950-ffb3-42ea-9292-eb4b26e0fdf5" activeEnvironment="Default" name="QF Project" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="31539c99-f92e-4380-8a1c-b1d2c90b735f" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Flights" path="/flights" id="f08e44d5-5c65-4a73-afbb-934af08b8415"><con:settings/><con:parameters/><con:method name="Flights 1" id="13a33624-6731-41c0-97e9-26c886a1c66b" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:flig="http://localhost/flights">flig:Response</con:element></con:representation><con:request name="Request 1" id="e01556c8-24a8-420f-8cd4-7850be186813" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+"flights":[{
+	"departure": {
+		"airport":
+			{"iata": "BNE",
+			 "airline": "QF", 
+			 "flightNumber": "001"},
+		"scheduled":
+			{"datetime": "05/11/2019 22:00"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "SYD"}
+	}
+},
+{
+	"departure": {
+		"airport":
+			{"iata": "SYD",
+			 "airline": "QF", 
+			 "flightNumber": "002"},
+		"scheduled":
+			{"datetime": "05/11/2019 02:00"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "PER"}
+	}
+},
+{
+	"departure": {
+		"airport":
+			{"iata": "CNS",
+			 "airline": "QF", 
+			 "flightNumber": "003"},
+		"scheduled":
+			{"datetime": "05/11/2019 12:30"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "PER"}
+	}
+},
+{
+	"departure": {
+		"airport":
+			{"iata": "SYD",
+			 "airline": "EK", 
+			 "flightNumber": "214"},
+		"scheduled":
+			{"datetime": "05/11/2019 12:50"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "DXB"}
+	}
+},
+{
+	"departure": {
+		"airport":
+			{"iata": "DXB",
+			 "airline": "EK", 
+			 "flightNumber": "218"},
+		"scheduled":
+			{"datetime": "05/11/2019 05:20"}
+	},
+	"arrival":{
+		"airport":
+			{"iata": "SYD"}
+	}
+}
+]
+}</con:request><con:originalUri>http://localhost/flights</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
